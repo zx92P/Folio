@@ -606,7 +606,7 @@
 
     <footer class="case-footer">
         <p>Next Project</p>
-        <a href="#">Aura Wealth Management →</a>
+        <a href="#"></a>
     </footer>
 </body>
 <script>
@@ -622,5 +622,11 @@
         modal.classList.remove('active');
         document.body.style.overflow = 'auto';
     });
+
+    window.addEventListener('pageshow', (event) => {
+  if (event.persisted) {
+    window.location.reload(); // Force a refresh if the page was cached
+  }
+});
 </script>
 </html>
