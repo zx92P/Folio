@@ -725,9 +725,9 @@
         modal.classList.remove('active');
         document.body.style.overflow = 'auto'; // Restore scrolling
 
-        window.addEventListener('pageshow', (event) => {
+   window.addEventListener("pageshow", function (event) {
   if (event.persisted) {
-    window.location.reload(); // Force a refresh if the page was cached
+    window.location.reload();
   }
 });
    
