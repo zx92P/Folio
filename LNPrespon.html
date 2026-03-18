@@ -122,7 +122,7 @@
           .chapter-nav { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
         .chapter-nav a { text-decoration: none; color: var(--muted-paper); font-size: 0.75rem; transition: 0.3s; }
         .chapter-nav a:hover { color: var(--ink); padding-left: 5px; }
-        .narrative-block { margin-bottom: 120px; max-width: 800px; scroll-margin-top: 140px; }
+        .narrative-block { margin-bottom: 80px; max-width: 800px; scroll-margin-top: 140px; }
         .chapter-num { font-size: 0.7rem; color: var(--accent); font-weight: 600; margin-bottom: 10px; display: block; }
         .narrative-block h3 { font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 25px; font-weight: 400; }
 
@@ -196,10 +196,11 @@
         .case-footer a { font-family: var(--font-display); font-size: clamp(1.5rem, 5vw, 3rem); color: var(--ink); text-decoration: none; }
 
         .cr8{
-            background: url(crazy8.png);
+            background: url(mniejsze.png);
             background-repeat: no-repeat;
-            height: clamp(400px, 210vh, 1500px); background-size: cover; 
+           height: 900px; 
             margin-left: 0px;
+            
         }
 
         .winner-img{
@@ -404,6 +405,41 @@
             .carousel-viewport { width: 280px; height: 560px; }
             .winner-img { width: 80%; }
         }
+
+        .p1{
+            margin-bottom: 80px;
+        }
+        .p2{
+            margin-bottom: 80px;
+        }
+        .befpic{
+            background: url(befpic.png);
+            width: 100%;       /* Fills the container width to avoid "empty space" */
+    max-width: 800px;  /* Prevents it from becoming awkwardly huge on desktop */
+    height: 400px;     /* Or whatever height fits your screenshot */
+    margin: 40px auto; /* Centers it horizontally and adds vertical breathing room */
+    display: block;    /* Required for margin: auto to work */
+    background-repeat: no-repeat;
+    background-position: center;
+           
+        }
+        .fr1{
+            width: 450px;
+            padding: 0px;
+          
+            margin: 40px auto; /* Centers the block horizontally */
+    display: block;    /* Ensures it respects the auto margin */
+
+        }
+        .fr2{background-color: #eee;}
+        .tests{
+            background: url(testss.png);
+            background-repeat: no-repeat;
+          margin-left: 40px;
+        max-width: 680px;
+        max-height: 220px;
+        
+        }
     </style>
 </head>
 <body>
@@ -411,7 +447,7 @@
     <nav class="top-nav">
         <div class="logo">M.GRUSZEWSKI</div>
         <div class="nav-links">
-            <a href="index.html">Home</a>
+              <a href="index.html">Home</a>
             <a href="about.html">About</a>
             
         </div>
@@ -447,23 +483,37 @@
                     <a href="#part-3">03. User Persona</a>
                     <a href="#part-4">04. Iteration</a>
                     <a href="#part-5">05. Impact</a>
+                    <a href="#part-6">06. Final Design</a>
                 </nav>
             </div>
         </aside>
 
 
         <section class="case-narrative">
-            <article class="narrative-block" id="part-1">
-                <span class="chapter-num">01 / DISCOVERY</span>
-                <h3>The Vanishing Interface</h3>
-                <p>Right from the first boot, I knew something was wrong. An October 2021 update remarkably removed the core menu button. My intuition was confirmed by 600+ reviews averaging 2 stars. The official mobile app, around since 2015, had effectively locked its users out of their own experience.</p>
-                <div class="visual-frame"><div class="placeholder"></div></div>
-            </article>
+             <article id="part-1" class="narrative-block p1">
+    
 
-            <article class="narrative-block" id="part-2">
+    <div style="margin-bottom: 40px; padding: 30px; background: #fff; border: 1px solid var(--border); border-left: 4px solid #d9534f;">
+        <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #d9534f; font-weight: 800; margin-bottom: 10px;">The Research Catalyst</p>
+        <h3 style="font-size: 1.8rem; margin-bottom: 10px;">A Failure of Official Standards</h3>
+        <p>Wanting to follow the Polish national team, I turned to the official platform. What I found was a design so broken it prompted <strong>600+ reviews averaging 2 stars</strong>. A 2021 update had deleted core navigation features, effectively locking fans out.</p>
+    </div>
+ <div class="befpic"></div>
+ <span class="chapter-num">01 / DISCOVERY</span>
+    <h3>First Impressions vs. Reality</h3>
+    <p>
+        My intuition was immediate: the app felt stuck in 2015. To validate this, I audited recent updates and store feedback. The data was clear—the "digital home" of Polish football was causing massive user friction. This wasn't just a visual issue; it was a <strong>functional lockout</strong>.
+    </p>
+</article>
+                <div class="visual-frame"><div class="placeholder"></div></div>
+             <blockquote>
+                    "Who even let this out to use? Where’s the menu, where is the login which is required by the app? Nothing works here."
+                </blockquote>
+
+            <article class="narrative-block p2" id="part-2">
                 <span class="chapter-num">02 / RESEARCH</span>
                 <h3>Research & Task Failure</h3>
-                <p>I invited 10 participants and moved away from linear development, opting for the <strong>'Hot Potato'</strong> technique. I conducted qualitative interviews and asked them to find a specific team and their info. <strong>Giving up was the common reaction.</strong></p>
+                <p>I invited 10 participants to a <strong>‘Hot Potato’ research cycle</strong>—an iterative technique ensuring a constant stream of feedback. I conducted qualitative interviews to gauge first impressions and set a primary task: <em>Find a specific team and their detailed information.</em></p>
                 
                 <div class="results-grid">
                     <div class="result-card"><h4>60%</h4><p>Initial Success Rate</p></div>
@@ -472,15 +522,102 @@
                 </div>
 
                 <blockquote>
-                    "Who even let this out to use? Where’s the menu, where is the login which is required by the app? Nothing works here."
+                    "I just want to see the lineup. I've clicked three different icons and I'm still on the homepage. It feels broken."
                 </blockquote>
+                <div style="margin: 50px 0; border: 2px solid #eee; padding: 60px 40px; background: #fff; border-radius: 12px; font-family: 'Inter', sans-serif; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+    
+    <div style="text-align: center; margin-bottom: 60px; position: relative;">
+        <span style="font-size: 1.5rem;">🏟️</span>
+        <h3 style="font-size: 1.8rem; margin-top: 10px; font-weight: 800; color: #333; text-transform: uppercase; letter-spacing: 1px;">The Match-Day Journey</h3>
+        <p style="font-size: 0.95rem; color: #666; max-width: 600px; margin: 10px auto 0; line-height: 1.6;">Mapping the emotional friction of a fan trying to find a lineup during a 15-minute work break.</p>
+        <div style="position: absolute; bottom: -25px; left: 50%; transform: translateX(-50%); width: 100px; height: 10px; border-bottom: 3px solid #d9534f; border-radius: 50%; opacity: 0.3;"></div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 80px;">
+        
+        <div style="position: relative;">
+            <div style="display: flex; align-items: center; margin-bottom: 30px;">
+                <span style="font-size: 1.3rem; margin-right: 15px;">😫</span>
+                <span style="font-weight: 800; font-size: 1.1rem; color: #d9534f; text-transform: uppercase; letter-spacing: 1px;">Legacy App: The "Hidden" 20s Maze</span>
+            </div>
+            
+            <div style="display: flex; gap: 0; align-items: flex-start; justify-content: space-between; position: relative;">
+                <div style="position: absolute; top: 35px; left: 50px; right: 50px; height: 2px; border-top: 2px dashed #d9534f; opacity: 0.3; z-index: 1;"></div>
+
+                <div style="flex: 1; text-align: center; z-index: 2; position: relative;">
+                    <div style="width: 70px; height: 70px; background: #fff; border: 3px solid #d9534f; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.5rem;">📱</div>
+                    <p style="font-size: 0.8rem; font-weight: 700; color: #333;">Open App</p>
+                    <p style="font-size: 0.75rem; color: #666; margin-top: 5px;">Needs lineup FAST.</p>
+                </div>
+
+                <div style="flex: 1; text-align: center; z-index: 2; position: relative;">
+                    <div style="width: 70px; height: 70px; background: #fff; border: 3px solid #d9534f; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.5rem;">🍔</div>
+                    <p style="font-size: 0.8rem; font-weight: 700; color: #333;">Lost in Menu</p>
+                    <p style="font-size: 0.75rem; color: #666; margin-top: 5px;">Taps hidden drawer.</p>
+                </div>
+
+                <div style="flex: 1; text-align: center; z-index: 2; position: relative;">
+                    <div style="width: 70px; height: 70px; background: #fff; border: 3px solid #d9534f; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.5rem;">🔎</div>
+                    <p style="font-size: 0.8rem; font-weight: 700; color: #333;">Search Loop</p>
+                    <p style="font-size: 0.75rem; color: #666; margin-top: 5px;">Scans 12+ categories.</p>
+                </div>
+
+                <div style="flex: 1; text-align: center; z-index: 2; position: relative;">
+                    <div style="width: 70px; height: 70px; background: #333; border: 3px solid #333; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">😤</div>
+                    <p style="font-size: 0.8rem; font-weight: 700; color: #fff; background: #d9534f; padding: 2px 6px; display: inline-block; border-radius: 2px;">Abandoned!</p>
+                    <p style="font-size: 0.75rem; color: #666; margin-top: 5px;">Task Failure at 20s.</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; border-left: 3px solid #feebeb; padding-left: 20px;">
+                <p style="font-size: 0.85rem; color: #d9534f; font-style: italic; line-height: 1.5;">
+                    "Real User Quote: I just want to see who is playing today. I've clicked three icons and I'm still on the news page. I'm going back to Google."
+                </p>
+            </div>
+        </div>
+
+        
+    </div>
             </article>
 
             <article class="narrative-block" id="part-2.5">
     <span class="chapter-num">02.5 / COMPETITIVE AUDIT</span>
-    <h3>Mapping the Battlefield</h3>
+    <h3>Learning from the Competition</h3>
     <p>To understand where the current experience was failing, I audited four leading sports competitors. While these platforms vary in scale, they share a common goal: delivering high-stakes data in seconds. By analyzing thousands of App Store reviews and mapping their features, I identified the industry "habits" that users have come to expect—and exactly where our app was breaking those promises.</p>
+<div style="margin: 40px 0; border: 1px solid var(--border); background: #fff; padding: 30px;">
+        <p style="font-weight: 800; font-size: 0.75rem; text-transform: uppercase; color: #666; margin-bottom: 20px; letter-spacing: 1px;">Task: Check Live Score of "Team X"</p>
+        
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <div style="width: 120px; font-size: 0.8rem; font-weight: 700;">Competitors</div>
+                <div style="flex: 1; display: flex; gap: 5px; align-items: center;">
+                    <span style="background: #2e5a47; color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.7rem;">Open App</span>
+                    <span style="color: #ccc;">→</span>
+                    <span style="background: #2e5a47; color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.7rem;">Tap "Live"</span>
+                    <span style="color: #ccc;">→</span>
+                    <span style="font-weight: 800; color: #2e5a47; font-size: 0.8rem; margin-left: 10px;">2 Taps Total</span>
+                </div>
+            </div>
 
+            <hr style="border: 0; border-top: 1px solid #eee;">
+
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <div style="width: 120px; font-size: 0.8rem; font-weight: 700; color: #d9534f;">Current App</div>
+                <div style="flex: 1; display: flex; flex-wrap: wrap; gap: 5px; align-items: center;">
+                    <span style="border: 1px solid #d9534f; padding: 4px 10px; border-radius: 20px; font-size: 0.7rem;">Open App</span>
+                    <span style="color: #ccc;">→</span>
+                    <span style="border: 1px solid #d9534f; padding: 4px 10px; border-radius: 20px; font-size: 0.7rem;">Open Menu</span>
+                    <span style="color: #ccc;">→</span>
+                    <span style="border: 1px solid #d9534f; padding: 4px 10px; border-radius: 20px; font-size: 0.7rem;">Select League</span>
+                    <span style="color: #ccc;">→</span>
+                    <span style="border: 1px solid #d9534f; padding: 4px 10px; border-radius: 20px; font-size: 0.7rem;">Filter Live</span>
+                    <span style="color: #ccc;">→</span>
+                    <span style="border: 1px solid #d9534f; padding: 4px 10px; border-radius: 20px; font-size: 0.7rem;">Select Match</span>
+                    <span style="font-weight: 800; color: #d9534f; font-size: 0.8rem; margin-left: 10px;">5+ Taps</span>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="comparison-grid">
         <div class="swot-card strength">
             <h4>Strengths</h4>
@@ -520,7 +657,7 @@
             <article class="narrative-block" id="part-3">
                 <span class="chapter-num">03 / USER PERSONA</span>
                 <h3>The Exhausted Supporter</h3>
-                <p>Creating a persona helped me understand the environment. I learned when and how fans access information, and the moods that accompany them.</p>
+                <p> Understanding the "Environmental Context" was key. A fan like Tomek isn't browsing in a quiet room; he's often on a noisy job site or a moving train with limited time and one-handed mobile use.</p>
                 
                <div class="persona-card">
                 <div>
@@ -534,14 +671,64 @@
                 </div>
             </div>
             </article>
+            <p>
+        To move beyond my own assumptions, I asked the 10 participants to rank common app features from <strong>1 (Critical) to 4 (Secondary)</strong>. This data directly informed the new <strong>Information Architecture</strong>, ensuring the most vital data required the fewest taps.
+    </p>
+
+    <div style="margin: 30px 0; border: 1px solid var(--border); background: #fff; overflow: hidden;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+            <thead style="background: #f9f9f9; border-bottom: 2px solid var(--border);">
+                <tr>
+                    <th style="padding: 15px; text-align: left; width: 80px;">Rank</th>
+                    <th style="padding: 15px; text-align: left;">Feature</th>
+                    <th style="padding: 15px; text-align: left;">User Intent</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid var(--border);">
+                    <td style="padding: 15px; font-weight: 800; color: #d9534f; text-align: center;">1</td>
+                    <td style="padding: 15px; font-weight: 600;">Match Schedule</td>
+                    <td style="padding: 15px; color: #666;">Planning viewership around work/life commitments.</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border);">
+                    <td style="padding: 15px; font-weight: 800; color: #e67e22; text-align: center;">2</td>
+                    <td style="padding: 15px; font-weight: 600;">Live Scores & Lineups</td>
+                    <td style="padding: 15px; color: #666;">Instant updates during match-day "burst" sessions.</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border);">
+                    <td style="padding: 15px; font-weight: 800; color: #f1c40f; text-align: center;">3</td>
+                    <td style="padding: 15px; font-weight: 600;">News</td>
+                    <td style="padding: 15px; color: #666;">Post-match analysis, transfer news, and injury reports.</td>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; font-weight: 800; color: #95a5a6; text-align: center;">4</td>
+                    <td style="padding: 15px; font-weight: 600;">Multimedia</td>
+                    <td style="padding: 15px; color: #666;">Leisurely browsing of behind-the-scenes content.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
             <article class="narrative-block" id="part-4">
                 <span class="chapter-num">04 / ITERATION</span>
-                <h3>Ideation & A/B Testing</h3>
+                <h3>Learning from Failed Iterations</h3>
                 <p>I used <strong>'Crazy 8’s'</strong> to ideate rapidly. My first designs actually failed—they created new issues. I dove back into wireframing and settled on a design that leveraged existing mobile habits. Users settled on a layout because it felt <strong>familiar</strong> and offered <strong>easy access to data.</strong></p>
-                <div class="visual-frame"><div class="placeholder cr8"></div></div>
-                <p style="margin: 40px 0 20px;">The final iteration focused on familiarity. Users settled on <strong>Variant B</strong> because it offered the fastest path to live match data without sacrificing brand aesthetic.</p>
-
+                <div class="visual-frame fr1"><div class="placeholder cr8"></div></div>
+                <div class="visual-frame fr2"><div class="placeholder tests"></div></div>
+                <div class="results-grid">
+                    <div class="result-card winner-card">
+                        <h4>Nav Shift</h4>
+                        <p>Moved from hidden side-menu to standard 4-tab bottom navigation.</p>
+                    </div>
+                    <div class="result-card winner-card">
+                        <h4>IA Cleanup</h4>
+                        <p>Consolidated 12 menu items into 4 logical buckets based on user priority.</p>
+                    </div>
+                </div>
+                <div class="result-item" style="background: #fff; padding: 20px; border: 1px solid var(--border); border-left: 3px solid #2e5a47;">
+        <span class="label">The Winner's Logic</span>
+        <p style="font-size: 0.85rem;">Users preferred the final design for three reasons: <strong>Familiarity</strong> (reduced learning curve), <strong>Engaging Graphics</strong>, and <strong>Immediate Data Access</strong>.</p>
+    </div>
    
         <div class="winner-img"></div>
         
@@ -564,15 +751,85 @@
         <strong>User Reservation:</strong> While highly efficient, some users felt the "Exclusive Content" was deprioritized. However, 100% of participants agreed that score accessibility was the primary goal.
     </p>
             </article>
+<article class="narrative-block" >
+    
+    <h3>Mapping the Breakdown of Logic</h3>
+    <p>
+        The core issue wasn't just aesthetic; the app suffered from <strong>Information Architecture (IA) collapse</strong>. After the October 2021 update, users were left without a persistent navigation anchor. This forced fans into a "loop of frustration," where they had to back out to the home screen multiple times just to switch between news and scores.
+    </p>
 
+    <div style="margin: 40px 0; border: 1px solid var(--border); padding: 30px; background: #fff; width: 100%;">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px;">
+            <div style="flex: 1; min-width: 280px;">
+                <p style="font-weight: 800; color: #d9534f; font-size: 0.8rem; text-transform: uppercase;">The Legacy Logic (Broken)</p>
+                <p style="font-size: 0.9rem; margin-bottom: 15px;">A deep, 4-level hierarchy that hid essential features like 'My Team' and 'Login' inside a non-responsive side-drawer.</p>
+                <div style="height: 150px; background: #feebeb; border: 1px dashed #d9534f; display: flex; align-items: center; justify-content: center; color: #d9534f; font-size: 0.75rem;">
+                    <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+    <div style="width: 60px; height: 20px; border: 1.5px solid #d9534f; border-radius: 4px; font-size: 8px; font-weight: bold; display: flex; align-items: center; justify-content: center;">MENU</div>
+    <div style="height: 15px; width: 1.5px; background: #d9534f;"></div>
+    
+    <div style="display: flex; gap: 10px;">
+        <div style="width: 40px; height: 15px; background: #fdeaea; border-radius: 2px;"></div>
+        <div style="width: 40px; height: 15px; border: 1px solid #d9534f; border-radius: 2px; font-size: 8px; display: flex; align-items: center; justify-content: center;">Teams</div>
+        <div style="width: 40px; height: 15px; background: #fdeaea; border-radius: 2px;"></div>
+    </div>
+    <div style="height: 15px; width: 1.5px; background: #d9534f; margin-left: 25px;"></div>
+    
+    <div style="display: flex; gap: 5px; margin-left: 40px;">
+        <div style="width: 35px; height: 15px; border: 1px solid #d9534f; border-radius: 2px; font-size: 8px; display: flex; align-items: center; justify-content: center;">Leagues</div>
+        <div style="width: 35px; height: 15px; background: #fdeaea; border-radius: 2px;"></div>
+    </div>
+    <div style="height: 15px; width: 1.5px; background: #d9534f; margin-left: 65px;"></div>
+    
+    <div style="width: 50px; height: 20px; background: #d9534f; color: white; border-radius: 4px; font-size: 8px; font-weight: bold; display: flex; align-items: center; justify-content: center; margin-left: 80px;">SCHEDULE</div>
+    
+    <div style="margin-top: 10px; font-size: 11px; color: #d9534f; font-weight: bold;">[ 4+ Clicks to Entry ]</div>
+</div>
+                </div>
+            </div>
+            <div style="flex: 1; min-width: 280px;">
+                <p style="font-weight: 800; color: #2e5a47; font-size: 0.8rem; text-transform: uppercase;">The New Logic (Streamlined)</p>
+                <p style="font-size: 0.9rem; margin-bottom: 15px;">A flat, 1-level hierarchy using a persistent <strong>Bottom Tab Bar</strong>. This follows Jakob’s Law, using patterns fans already know.</p>
+                <div style="height: 150px; background: #eaf6f0; border: 1px dashed #2e5a47; display: flex; align-items: center; justify-content: center; color: #2e5a47; font-size: 0.75rem;">
+                    <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+    <div style="display: flex; gap: 8px; align-items: center;">
+        <div style="width: 35px; height: 35px; border: 1px solid #2e5a47; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div style="width: 10px; height: 10px; background: #2e5a47; border-radius: 2px; margin-bottom: 2px;"></div>
+            <span style="font-size: 8px;">Home</span>
+        </div>
+        <div style="width: 45px; height: 45px; background: #2e5a47; color: white; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(46, 90, 71, 0.3);">
+            <div style="width: 12px; height: 12px; background: white; border-radius: 2px; margin-bottom: 3px;"></div>
+            <span style="font-size: 8px; font-weight: bold;">MATCHES</span>
+        </div>
+        <div style="width: 35px; height: 35px; border: 1px solid #2e5a47; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div style="width: 10px; height: 10px; background: #2e5a47; border-radius: 2px; margin-bottom: 2px;"></div>
+            <span style="font-size: 8px;">News</span>
+        </div>
+        <div style="width: 35px; height: 35px; border: 1px solid #2e5a47; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div style="width: 10px; height: 10px; background: #2e5a47; border-radius: 2px; margin-bottom: 2px;"></div>
+            <span style="font-size: 8px;">Profile</span>
+        </div>
+    </div>
+    
+    <div style="margin-top: 15px; font-size:11px; color: #2e5a47; font-weight: bold;">[ 1 Click Accessibility ]</div>
+    <p style="font-size: 10px; color: #666; margin-top: 5px; width: 180px; text-align: center;">Persistent navigation prevents "memory fatigue" and cognitive loops.</p>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</article>
             <article class="narrative-block" id="part-5">
                 <span class="chapter-num">05 / IMPACT</span>
                 <h3>Impact & Conclusion</h3>
-                <p>By bringing order and symmetry, time on task decreased significantly and confusion dropped. Sometimes the best solutions come from studying others' designs to ensure familiarity and decrease user fatigue.</p>
+                <p>To validate the redesign, I returned to my original 10 participants for a High-Fidelity Usability Test. I measured the same core task: Find a specific match lineup. The results moved from a "Functional Lockout" to a frictionless experience, proving that a user-centered Information Architecture (IA) is the backbone of app retention.</p>
                 
                 <div class="results-grid">
-                    <div class="result-card"><h4>100%</h4><p>Final Success Rate</p></div>
-                    <div class="result-card"><h4>-8s</h4><p>Avg Time Reduction</p></div>
+                    <div class="result-card"><h4>100%</h4><p><strong>Success Rate</strong><br>
+            <small>Up from 60%. Every user completed the task without "Menu Panic."</small></p></div>
+                    <div class="result-card"><h4>-8s</h4>       <p><strong>Efficiency Gain</strong><br>
+            <small>Task time dropped from 20s to 8s, meeting the "Match-Day Burst" requirement.</small></p></div>
                     <div class="result-card"><h4>Clear</h4><p>Feature Labeling</p></div>
                 </div>
 
@@ -582,7 +839,7 @@
             </article>
         </section>
     </main>
- <div class="full-width-section">
+ <div class="full-width-section" id="part-6">
     <div style="text-align: center; margin-bottom: 40px;">
         <span class="label" style="color: #666;">Experience the Flow</span>
         <h3 style="color: white; font-family: var(--font-display); font-size: 2.5rem;">The Final Interface</h3>
@@ -604,10 +861,7 @@
     <img src="lmains.png" class="modal-content" id="modalImg">
 </div>
 
-  <!--  <footer class="case-footer">
-        <p>Next Project</p>
-        <a href="#"></a> 
-    </footer> -->
+  
 </body>
 <script>
     const trigger = document.getElementById('trigger');
@@ -622,12 +876,5 @@
         modal.classList.remove('active');
         document.body.style.overflow = 'auto';
     });
-
- window.addEventListener("pageshow", function (event) {
-  if (event.persisted) {
-    window.location.reload();
-  }
-});
-});
 </script>
 </html>
