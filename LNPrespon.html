@@ -440,6 +440,23 @@
         max-height: 220px;
         
         }
+        .journey-img{background: url(journey.png); background-size: cover;      /* Scales image to fill the div */
+    background-position: center; /* Centers the focal point */
+    width: 100%;                 /* Takes full width of parent */
+    height: 280px;}
+         .oldia{background: url(oldia.png); }
+         .newia{background: url(newia.png);}
+         .oldia, .newia {
+    width: 100%;
+    height: 350px; /* Much taller to allow the image to scale up */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* Keeps the whole diagram visible */
+    margin: 0 auto;
+}
+
+
+        
     </style>
 </head>
 <body>
@@ -527,7 +544,7 @@
                 <div style="margin: 50px 0; border: 2px solid #eee; padding: 60px 40px; background: #fff; border-radius: 12px; font-family: 'Inter', sans-serif; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
     
     <div style="text-align: center; margin-bottom: 60px; position: relative;">
-        <span style="font-size: 1.5rem;">🏟️</span>
+        
         <h3 style="font-size: 1.8rem; margin-top: 10px; font-weight: 800; color: #333; text-transform: uppercase; letter-spacing: 1px;">The Match-Day Journey</h3>
         <p style="font-size: 0.95rem; color: #666; max-width: 600px; margin: 10px auto 0; line-height: 1.6;">Mapping the emotional friction of a fan trying to find a lineup during a 15-minute work break.</p>
         <div style="position: absolute; bottom: -25px; left: 50%; transform: translateX(-50%); width: 100px; height: 10px; border-bottom: 3px solid #d9534f; border-radius: 50%; opacity: 0.3;"></div>
@@ -536,37 +553,10 @@
     <div style="display: flex; flex-direction: column; gap: 80px;">
         
         <div style="position: relative;">
-            <div style="display: flex; align-items: center; margin-bottom: 30px;">
-                <span style="font-size: 1.3rem; margin-right: 15px;">😫</span>
-                <span style="font-weight: 800; font-size: 1.1rem; color: #d9534f; text-transform: uppercase; letter-spacing: 1px;">Legacy App: The "Hidden" 20s Maze</span>
-            </div>
+           
             
             <div style="display: flex; gap: 0; align-items: flex-start; justify-content: space-between; position: relative;">
-                <div style="position: absolute; top: 35px; left: 50px; right: 50px; height: 2px; border-top: 2px dashed #d9534f; opacity: 0.3; z-index: 1;"></div>
-
-                <div style="flex: 1; text-align: center; z-index: 2; position: relative;">
-                    <div style="width: 70px; height: 70px; background: #fff; border: 3px solid #d9534f; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.5rem;">📱</div>
-                    <p style="font-size: 0.8rem; font-weight: 700; color: #333;">Open App</p>
-                    <p style="font-size: 0.75rem; color: #666; margin-top: 5px;">Needs lineup FAST.</p>
-                </div>
-
-                <div style="flex: 1; text-align: center; z-index: 2; position: relative;">
-                    <div style="width: 70px; height: 70px; background: #fff; border: 3px solid #d9534f; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.5rem;">🍔</div>
-                    <p style="font-size: 0.8rem; font-weight: 700; color: #333;">Lost in Menu</p>
-                    <p style="font-size: 0.75rem; color: #666; margin-top: 5px;">Taps hidden drawer.</p>
-                </div>
-
-                <div style="flex: 1; text-align: center; z-index: 2; position: relative;">
-                    <div style="width: 70px; height: 70px; background: #fff; border: 3px solid #d9534f; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.5rem;">🔎</div>
-                    <p style="font-size: 0.8rem; font-weight: 700; color: #333;">Search Loop</p>
-                    <p style="font-size: 0.75rem; color: #666; margin-top: 5px;">Scans 12+ categories.</p>
-                </div>
-
-                <div style="flex: 1; text-align: center; z-index: 2; position: relative;">
-                    <div style="width: 70px; height: 70px; background: #333; border: 3px solid #333; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">😤</div>
-                    <p style="font-size: 0.8rem; font-weight: 700; color: #fff; background: #d9534f; padding: 2px 6px; display: inline-block; border-radius: 2px;">Abandoned!</p>
-                    <p style="font-size: 0.75rem; color: #666; margin-top: 5px;">Task Failure at 20s.</p>
-                </div>
+              <div class="journey-img"></div>
             </div>
             
             <div style="margin-top: 30px; border-left: 3px solid #feebeb; padding-left: 20px;">
@@ -726,7 +716,7 @@
                     </div>
                 </div>
                 <div class="result-item" style="background: #fff; padding: 20px; border: 1px solid var(--border); border-left: 3px solid #2e5a47;">
-        <span class="label">The Winner</span>
+        <span class="label">The Winner's Logic</span>
         <p style="font-size: 0.85rem;">Users preferred the final design for three reasons: <strong>Familiarity</strong> (reduced learning curve), <strong>Engaging Graphics</strong>, and <strong>Immediate Data Access</strong>.</p>
     </div>
    
@@ -743,12 +733,12 @@
         </div>
         <div class="result-card winner-card">
             <h4>Logic</h4>
-            <p><strong>Priority:</strong> "News" section satisfies the need for immediate data.</p>
+            <p><strong>Priority:</strong> Sticky "Live Now" header satisfies the need for immediate data.</p>
         </div>
     </div>
 
     <p style="font-size: 0.75rem; font-style: italic; color: var(--muted-paper); border-top: 1px solid var(--border); padding-top: 20px;">
-        <strong>User Reservation:</strong> While highly efficient, some users felt the "Shop" was deprioritized. However, 100% of participants agreed that score accessibility was the primary goal.
+        <strong>User Reservation:</strong> While highly efficient, some users felt the "Exclusive Content" was deprioritized. However, 100% of participants agreed that score accessibility was the primary goal.
     </p>
             </article>
 <article class="narrative-block" >
@@ -758,66 +748,44 @@
         The core issue wasn't just aesthetic; the app suffered from <strong>Information Architecture (IA) collapse</strong>. After the October 2021 update, users were left without a persistent navigation anchor. This forced fans into a "loop of frustration," where they had to back out to the home screen multiple times just to switch between news and scores.
     </p>
 
-    <div style="margin: 40px 0; border: 1px solid var(--border); padding: 30px; background: #fff; width: 100%;">
-        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px;">
-            <div style="flex: 1; min-width: 280px;">
-                <p style="font-weight: 800; color: #d9534f; font-size: 0.8rem; text-transform: uppercase;">The Legacy Logic (Broken)</p>
-                <p style="font-size: 0.9rem; margin-bottom: 15px;">A deep, 4-level hierarchy that hid essential features like 'My Team' and 'Login' inside a non-responsive side-drawer.</p>
-                <div style="height: 150px; background: #feebeb; border: 1px dashed #d9534f; display: flex; align-items: center; justify-content: center; color: #d9534f; font-size: 0.75rem;">
-                    <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
-    <div style="width: 60px; height: 20px; border: 1.5px solid #d9534f; border-radius: 4px; font-size: 8px; font-weight: bold; display: flex; align-items: center; justify-content: center;">MENU</div>
-    <div style="height: 15px; width: 1.5px; background: #d9534f;"></div>
-    
-    <div style="display: flex; gap: 10px;">
-        <div style="width: 40px; height: 15px; background: #fdeaea; border-radius: 2px;"></div>
-        <div style="width: 40px; height: 15px; border: 1px solid #d9534f; border-radius: 2px; font-size: 8px; display: flex; align-items: center; justify-content: center;">Teams</div>
-        <div style="width: 40px; height: 15px; background: #fdeaea; border-radius: 2px;"></div>
-    </div>
-    <div style="height: 15px; width: 1.5px; background: #d9534f; margin-left: 25px;"></div>
-    
-    <div style="display: flex; gap: 5px; margin-left: 40px;">
-        <div style="width: 35px; height: 15px; border: 1px solid #d9534f; border-radius: 2px; font-size: 8px; display: flex; align-items: center; justify-content: center;">Leagues</div>
-        <div style="width: 35px; height: 15px; background: #fdeaea; border-radius: 2px;"></div>
-    </div>
-    <div style="height: 15px; width: 1.5px; background: #d9534f; margin-left: 65px;"></div>
-    
-    <div style="width: 50px; height: 20px; background: #d9534f; color: white; border-radius: 4px; font-size: 8px; font-weight: bold; display: flex; align-items: center; justify-content: center; margin-left: 80px;">SCHEDULE</div>
-    
-    <div style="margin-top: 10px; font-size: 11px; color: #d9534f; font-weight: bold;">[ 4+ Clicks to Entry ]</div>
-</div>
-                </div>
-            </div>
-            <div style="flex: 1; min-width: 280px;">
-                <p style="font-weight: 800; color: #2e5a47; font-size: 0.8rem; text-transform: uppercase;">The New Logic (Streamlined)</p>
-                <p style="font-size: 0.9rem; margin-bottom: 15px;">A flat, 1-level hierarchy using a persistent <strong>Bottom Tab Bar</strong>. This follows Jakob’s Law, using patterns fans already know.</p>
-                <div style="height: 150px; background: #eaf6f0; border: 1px dashed #2e5a47; display: flex; align-items: center; justify-content: center; color: #2e5a47; font-size: 0.75rem;">
-                    <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
-    <div style="display: flex; gap: 8px; align-items: center;">
-        <div style="width: 35px; height: 35px; border: 1px solid #2e5a47; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <div style="width: 10px; height: 10px; background: #2e5a47; border-radius: 2px; margin-bottom: 2px;"></div>
-            <span style="font-size: 8px;">Home</span>
-        </div>
-        <div style="width: 45px; height: 45px; background: #2e5a47; color: white; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(46, 90, 71, 0.3);">
-            <div style="width: 12px; height: 12px; background: white; border-radius: 2px; margin-bottom: 3px;"></div>
-            <span style="font-size: 8px; font-weight: bold;">MATCHES</span>
-        </div>
-        <div style="width: 35px; height: 35px; border: 1px solid #2e5a47; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <div style="width: 10px; height: 10px; background: #2e5a47; border-radius: 2px; margin-bottom: 2px;"></div>
-            <span style="font-size: 8px;">Shop</span>
-        </div>
-        <div style="width: 35px; height: 35px; border: 1px solid #2e5a47; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <div style="width: 10px; height: 10px; background: #2e5a47; border-radius: 2px; margin-bottom: 2px;"></div>
-            <span style="font-size: 8px;">Profile</span>
-        </div>
-    </div>
-    
-    <div style="margin-top: 15px; font-size:11px; color: #2e5a47; font-weight: bold;">[ 1 Click Accessibility ]</div>
-    <p style="font-size: 10px; color: #666; margin-top: 5px; width: 180px; text-align: center;">Persistent navigation prevents "memory fatigue" and cognitive loops.</p>
-</div>
+   <div style="margin: 40px 0; border: 1px solid #eee; padding: 30px; background: #fff;">
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px;">
+      <div style="margin: 40px 0; border: 1px solid #eee; padding: 40px; background: #fff; border-radius: 8px;">
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px;">
+        
+        <div style="flex: 1; min-width: 320px; display: flex; flex-direction: column;">
+            <p style="font-weight: 800; color: #d9534f; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">The Legacy Logic (Broken)</p>
+            <p style="font-size: 0.95rem; margin-bottom: 20px; color: #555; line-height: 1.5; min-height: 60px;">
+                A confusing 4-level deep hierarchy. Users had to open a side-drawer and dig through nested menus just to find basic match info.
+            </p>
+            
+            <div style="height: 380px; background: #feebeb; border: 1px dashed #d9534f; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; border-radius: 6px;">
+                <div class="oldia"></div>
+                <div style="margin-top: 20px; font-size: 12px; color: #d9534f; font-weight: 800; background: #fff; padding: 6px 12px; border-radius: 4px; box-shadow: 0 2px 5px rgba(217,83,79,0.1);">
+                    PAIN POINT: 4+ CLICKS TO ENTRY
                 </div>
             </div>
         </div>
+
+        <div style="flex: 1; min-width: 320px; display: flex; flex-direction: column;">
+            <p style="font-weight: 800; color: #2e5a47; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">The New Logic (Streamlined)</p>
+            <p style="font-size: 0.95rem; margin-bottom: 20px; color: #555; line-height: 1.5; min-height: 60px;">
+                A flat, 1-level hierarchy using a persistent <strong>Bottom Tab Bar</strong>. Core features are now visible and accessible instantly.
+            </p>
+            
+            <div style="height: 380px; background: #eaf6f0; border: 1px dashed #2e5a47; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; border-radius: 6px;">
+                <div class="newia"></div>
+                <div style="margin-top: 20px; font-size: 12px; color: #2e5a47; font-weight: 800; background: #fff; padding: 6px 12px; border-radius: 4px; box-shadow: 0 2px 5px rgba(46,90,71,0.1);">
+                    SOLUTION: 1 CLICK ACCESSIBILITY
+                </div>
+            </div>
+        </div>
+
     </div>
+</div>
+
+    </div>
+</div>
 
 </article>
             <article class="narrative-block" id="part-5">
@@ -829,7 +797,7 @@
                     <div class="result-card"><h4>100%</h4><p><strong>Success Rate</strong><br>
             <small>Up from 60%. Every user completed the task without "Menu Panic."</small></p></div>
                     <div class="result-card"><h4>-8s</h4>       <p><strong>Efficiency Gain</strong><br>
-            <small>Task time dropped by 8s, meeting the "Match-Day Burst" requirement.</small></p></div>
+            <small>Task time dropped from 20s to 8s, meeting the "Match-Day Burst" requirement.</small></p></div>
                     <div class="result-card"><h4>Clear</h4><p>Feature Labeling</p></div>
                 </div>
 
