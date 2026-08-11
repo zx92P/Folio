@@ -39,7 +39,7 @@
             z-index: 1000;
         }
 
-        .logo { font-family: var(--font-display); font-size: 1.1rem; letter-spacing: 2px; font-weight: 500; }
+        .logo { font-family: var(--font-display); font-size: 1.1rem; letter-spacing: 2px; font-weight: 500; color: var(--ink); text-decoration: none; }
         .nav-links { display: flex; gap: 40px; align-items: center; }
         .nav-links a {
             text-decoration: none;
@@ -51,6 +51,12 @@
         }
         .nav-cta { border: 1px solid var(--ink); padding: 6px 15px; transition: 0.3s; }
         .nav-cta:hover { background: var(--ink); color: var(--bg) !important; }
+
+        @media (max-width: 400px) {
+            .top-nav { padding: 24px 5%; }
+            .logo { font-size: 0.95rem; letter-spacing: 1px; }
+            .nav-links { gap: 20px; }
+        }
 
         /* --- LAYOUT --- */
         /* Ensure the parent container is a flexbox for this to align correctly */
@@ -186,25 +192,17 @@ h1 i {
         /* --- RESPONSIVE --- */
         @media (max-width: 1024px) {
             .split-container { flex-direction: column; }
-            .profile-pane { 
-                position: relative; 
-                height: 50vh; 
-                top: 0; 
-                padding: 40px 5%; 
-                flex: none; 
-            }
             .content-pane { border-left: none; border-top: 1px solid var(--border); flex: none; padding: 60px 5%; }
+            .bio-text { max-width: 640px; }
         }
     </style>
 </head>
 <body>
 
    <nav class="top-nav">
-        <div class="logo">M.GRUSZEWSKI</div>
+        <a href="index.html" class="logo">M.GRUSZEWSKI</a>
         <div class="nav-links">
-            <a href="index.html">Home</a>
             <a href="about.html">About</a>
-           
         </div>
     </nav>
 
@@ -223,11 +221,11 @@ h1 i {
 
             <div class="bio-text">
                 <p>
-                    I am a UX/UI Designer driven by a deep curiosity about human behavior — how people think, what they expect, and where they get lost. My approach is rooted in critical observation and a refusal to accept "good enough" as a standard.
+                    I'm a UX Designer driven by deep curiosity about human behavior — why people do what they do: what shapes their expectations, where perception and intent quietly diverge, and how small changes in structure can reshape how an experience feels. I care whether something behaves the way people expect it to — and why, when it doesn't.
                 </p>
 
                 <p>
-                    I view design not just as an aesthetic layer, but as a problem-solving framework. I don't just ask what users need — I ask why, and I let that question shape every decision. A working knowledge of frontend development informs how I design — I understand the constraints, speak the language, and create solutions that are as realistic as they are thoughtful.
+                    Design, to me, is less about how something looks and more about how it actually behaves once someone's using it. Knowing what someone needs only tells half the story — the reason behind it is what actually shapes what I build. I've picked up enough frontend development along the way to understand what's realistic, not just what's ideal, and that's just as much a part of how I work as anything else.
                 </p>
 
                 <div class="milestone">
@@ -240,8 +238,7 @@ h1 i {
                     <ul class="skill-list">
                         <li>User Research & Audits</li>
                         <li>Prototyping</li>
-                        <li>Design Thinking</li>
-                        <li>Accessibility (WCAG)</li>
+                        <li>Information Architecture</li>
                         <li>Frontend Development</li>
                         <li>Interaction Design</li>
                     </ul>
