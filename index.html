@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MGruszewski</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,500&family=Inter:wght@400;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,500&family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #f9f8f5;
@@ -93,12 +93,21 @@
         h1 { 
             font-family: var(--font-display); 
             font-size: clamp(2.5rem, 5vw, 4.5rem); 
-            font-weight: 400; 
-            line-height: 1.1; 
-            margin-bottom: 1.5rem; 
+            font-weight: 500; 
+            line-height: 1.05; 
+            margin-bottom: 1.1rem; 
         }
         h1 i { font-family: var(--font-serif); font-weight: 300; }
-        .description { font-size: 1.1rem; line-height: 1.6; opacity: 0.8; max-width: 420px; }
+        .accent-name { color: var(--empire-green); }
+        .subhead {
+            font-family: var(--font-display);
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.35;
+            margin-bottom: 0.9rem;
+        }
+        .subhead i { font-style: italic; }
+        .description { font-family: var(--font-display); font-weight: 400; font-size: 1.1rem; line-height: 1.5; color: #4a4a48; max-width: 380px; }
 
         /* Right Side: Projects */
         .projects-pane { 
@@ -204,7 +213,8 @@
         <section class="intro-pane">
             <div class="sticky-content">
                 <span class="label">User Experience Designer</span>
-                <h1>I'm Mateusz. <br>I design with <i>empathy</i> <br> and intent.</h1>
+                <h1>I'm <span class="accent-name">Mateusz</span>.</h1>
+                <p class="subhead">Designing with <i>empathy</i> and intent.</p>
                 <p class="description">Creating better solutions by putting people first.</p>
             </div>
         </section>
